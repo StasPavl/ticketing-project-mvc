@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class AbstractMapService <T,ID> {
+public abstract class AbstractMapService <T,ID> {
     public Map<ID, T> map = new HashMap<>();
 
     T save(ID id, T object){
