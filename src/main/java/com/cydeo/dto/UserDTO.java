@@ -1,6 +1,6 @@
 package com.cydeo.dto;
 
-import com.cydeo.Model.Role;
+import com.cydeo.entity.Role;
 import com.cydeo.enums.Gender;
 import lombok.AllArgsConstructor;
 import lombok.Data;
