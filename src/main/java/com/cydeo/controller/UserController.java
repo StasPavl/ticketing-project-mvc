@@ -1,6 +1,7 @@
 package com.cydeo.controller;
 
 import com.cydeo.dto.UserDTO;
+import com.cydeo.service.RoleService;
 import com.cydeo.service.impl.RoleServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-        private final RoleServiceImpl roleService;
+        private final RoleService roleService;
 
         public UserController(RoleServiceImpl roleService) {
                 this.roleService = roleService;
