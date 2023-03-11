@@ -32,7 +32,7 @@
                                 <div class="panel-body">
 
                                     <!-- ------------------------FORM START----------------------------- -->
-                                    <form th:object="${user}" action="#">
+                                    <form th:object="${user}" th:action="@{/user/create}" method="post">
                                         <div class="row">
                                             <div class="col-sm-6 col-md-6">
                                                 <div class="form-group">
@@ -86,10 +86,10 @@
                                                 <div class="form-group">
                                                     <label>Gender</label><br>
                                                     <label class="custom-control custom-radio custom-control-inline">
-                                                        <input th:value="Male" th:field="*{gender}" type="radio" name="radio-inline" class="custom-control-input"><span class="custom-control-label">Male</span>
+                                                        <input th:value="MALE" th:field="*{gender}" type="radio" name="radio-inline" class="custom-control-input"><span class="custom-control-label">Male</span>
                                                     </label>
                                                     <label class="custom-control custom-radio custom-control-inline">
-                                                        <input th:value="Female" th:field="*{gender}" type="radio" name="radio-inline" class="custom-control-input"><span class="custom-control-label">Female</span>
+                                                        <input th:value="FEMALE" th:field="*{gender}" type="radio" name="radio-inline" class="custom-control-input"><span class="custom-control-label">Female</span>
                                                     </label>
 
                                                 </div>
