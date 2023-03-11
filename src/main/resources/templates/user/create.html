@@ -157,7 +157,7 @@
                                             <tr th:each="user : ${listUser}">
                                                 <td th:text="${user.firstName + ' ' + user.lastName}"></td>
                                                 <td th:text="${user.userName}"></td>
-                                                <td th:text="${user.gender}"></td>
+                                                <td th:text="${user.gender.value}"></td>
                                                 <td th:text="${user.phone}"></td>
                                                 <td th:text="${user.role.description}"></td>
                                                 <td class="actions">
