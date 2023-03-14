@@ -52,8 +52,19 @@ public class UserController {
 
                 userService.update(user);
 
-
                 return"redirect:/user/create";
         }
+
+        @GetMapping("/delete/{username}")
+        public String deleteUser(@PathVariable("username") String username, Model model){
+
+                userService.deleteById(username);
+
+                model.addAttribute("listRoles",roleService.findAll());
+                model.addAttribute("listUser", userService.findAll());
+
+                return "redirect:/user/create";
+        }
+
 
 }
