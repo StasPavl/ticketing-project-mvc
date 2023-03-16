@@ -56,7 +56,6 @@
                                                     <select th:field="*{assignedManager}" name="assignedmanager" class="custom-select">
                                                         <option th:value="''" th:text="Select"></option>
                                                         <option th:each="manager : ${managers}" th:value="${manager.userName}"
-                                                                th:if="${manager.role.description=='Manager'}"
                                                                 th:text="${manager.firstName + ' ' + manager.lastName}"></option>
                                                     </select>
                                                 </div>
@@ -132,7 +131,7 @@
                                             <tr th:each=" project : ${projects}">
                                                 <td th:text="${project.code}"></td>
                                                 <td th:text="${project.name}"></td>
-                                                <td th:text="${project.startDate + '-' + project.endDate}"></td>
+                                                <td th:text="${#temporals.format(project.startDate, 'MM.dd.yyy') + '-' + #temporals.format(project.endDate, 'MM.dd.yyyy')}"></td>
                                                 <td th:text="${project.assignedManager.firstName + ' ' + project.assignedManager.lastName}"></td>
                                                 <td th:text="${project.status.value}"></td>
 
