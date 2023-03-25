@@ -40,7 +40,9 @@
                                                     <label>Project</label>
                                                     <select th:field="*{project}"  name="project" class="custom-select">
                                                         <option th:value="''" th:text="Select"></option>
-                                                        <option th:each="project : ${projects}" th:value="${project.code}" th:text="${project.name}"></option>
+                                                        <option th:each="project : ${projects}"
+                                                                th:value="${project.code}"
+                                                                th:text="${project.name}"></option>
                                                     </select>
                                                 </div>
                                             </div>
