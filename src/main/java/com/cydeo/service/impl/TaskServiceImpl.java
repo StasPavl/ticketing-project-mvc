@@ -73,4 +73,10 @@ public class TaskServiceImpl extends AbstractMapService<TaskDTO,Long> implements
                 .filter(task -> task.getTaskStatus().equals(status))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public void updateStatus(TaskDTO task) {
+        findById(task.getId()).setTaskStatus(task.getTaskStatus()); //first status updated
+        update(task);//second task updated with new status
+    }
 }
